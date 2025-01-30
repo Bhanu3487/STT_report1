@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # Define the project name and path to the CSV file
 project_name = sys.argv[1]  # Change this as needed
-csv_path = f'C:/Users/bhanu/OneDrive/Desktop/courses/STT_Lab/Lab3/cs202_miner/results/{project_name}/matching_diff_analysis.csv'
+csv_path = f'./results/{project_name}/matching_diff_analysis.csv'
 
 # Check if the file exists
 if not os.path.exists(csv_path):
@@ -54,9 +54,9 @@ plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 
 # Save the plot
-output_plot_path = f'C:/Users/bhanu/OneDrive/Desktop/courses/STT_Lab/Lab3/cs202_miner/results/{project_name}/artifact_statistics.png'
+output_plot_path = f'./results/{project_name}/artifact_statistics.png'
 plt.savefig(output_plot_path)
 print(f"Plot saved to Results dir")
 
 # Show the plot
-plt.show()
+# plt.show()

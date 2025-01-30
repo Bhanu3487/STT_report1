@@ -26,6 +26,8 @@ python matching_diff_analysis.py $1
 
 python plots.py $1
 
+python mcc.py $1
+
 # Additional tasks if needed
 echo "Analysis completed for project $1."
 
@@ -39,4 +41,4 @@ if [ -d "$1" ]; then
     rm -rf "$1"
 fi
 
-echo "Cleanup completed."
+echo "Cleanup completed."./

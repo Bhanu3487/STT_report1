@@ -10,7 +10,7 @@ columns = ['old_file_path', 'new_file_path', 'commit_sha', 'parent_sha', 'commit
 
 rows = []
 count=0
-last_n=10
+last_n=15
 
 commits = []
 for x in Repository(sys.argv[1],only_no_merge=True,order='reverse').traverse_commits():

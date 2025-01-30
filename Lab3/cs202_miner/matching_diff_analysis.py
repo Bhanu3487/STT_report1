@@ -6,7 +6,7 @@ import sys
 project_name = sys.argv[1]
 
 # Define the file path dynamically
-file_path = f'C:/Users/bhanu/OneDrive/Desktop/courses/STT_Lab/Lab3/cs202_miner/results/{project_name}/diff_analysis.csv'
+file_path = f'./results/{project_name}/diff_analysis.csv'
 
 # Check if the file exists before proceeding
 if os.path.exists(file_path):
@@ -14,7 +14,7 @@ if os.path.exists(file_path):
     df['Matches'] = df.apply(lambda row: 'Yes' if row['diff_myers'] == row['diff_hist'] else 'No', axis=1)
 
     # Save the modified dataframe to a new CSV file
-    output_path = f'C:/Users/bhanu/OneDrive/Desktop/courses/STT_Lab/Lab3/cs202_miner/results/{project_name}/matching_diff_analysis.csv'
+    output_path = f'./results/{project_name}/matching_diff_analysis.csv'
     df.to_csv(output_path, index=False)
     
     print("File processed successfully.")
